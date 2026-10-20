@@ -1,0 +1,60 @@
+{
+  "verification_code": "AI-A2-8180",
+  "seed": 8180,
+  "n_train": 208,
+  "n_test": 53,
+  "features": [
+    "rainfall_mm",
+    "avg_temp_c",
+    "soil_moisture_pct",
+    "fertilizer_kg",
+    "field_size_ha",
+    "season",
+    "cooperative_support"
+  ],
+  "models": {
+    "mean_baseline": {
+      "MAE": 2.2936756984760525,
+      "RMSE": 2.810259258399275,
+      "R2": -0.021216053338849683,
+      "cv_RMSE_train": 2.507493568152867
+    },
+    "linear_regression": {
+      "MAE": 0.6962447374204898,
+      "RMSE": 0.8692860987761,
+      "R2": 0.9022874543271633,
+      "cv_RMSE_train": 1.001503794377132
+    },
+    "random_forest": {
+      "MAE": 1.1244604246668164,
+      "RMSE": 1.3634354834365001,
+      "R2": 0.7596223730981371,
+      "cv_RMSE_train": 1.333722869658813
+    },
+    "gradient_boosting": {
+      "MAE": 0.980402786069055,
+      "RMSE": 1.1970008123456255,
+      "R2": 0.8147263109636531,
+      "cv_RMSE_train": 1.3076217472235236
+    }
+  },
+  "selected_model": "linear_regression",
+  "selection_reason": "linear_regression had the lowest 5-fold cross-validated RMSE on the training set (1.0015 tons) and beats the mean baseline (test RMSE 2.8103 vs 0.8693). Selection used training-set CV only; test scores were reported afterwards.",
+  "important_error": {
+    "row_id": 172,
+    "actual_yield_tons": 6.1022,
+    "predicted_yield_tons": 8.314367406912774,
+    "error_tons": 2.2121674069127746,
+    "error_in_noise_sd": 2.7652092586409682,
+    "features": {
+      "rainfall_mm": 943.5811,
+      "avg_temp_c": 23.2133,
+      "soil_moisture_pct": 30.8981,
+      "fertilizer_kg": null,
+      "field_size_ha": 1.236,
+      "season": "B",
+      "cooperative_support": 0
+    },
+    "note": "Noise has sd 0.80 t, so errors of 2+ sd are expected in a few rows and cannot be removed by any model."
+  }
+}

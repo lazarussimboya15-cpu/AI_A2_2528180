@@ -1,0 +1,64 @@
+{
+  "verification_code": "AI-A2-8180",
+  "student_id": "ug2528180@ines.ac.rw",
+  "seed": 8180,
+  "dataset_sha256": "6e4324acd04d7c209b33860dc6eded0f80048de0657a488bf124f65067644aae",
+  "features": [
+    "rainfall_mm",
+    "avg_temp_c",
+    "soil_moisture_pct",
+    "fertilizer_kg",
+    "field_size_ha",
+    "season",
+    "cooperative_support"
+  ],
+  "ranges": {
+    "rainfall_mm": [
+      600.0,
+      1400.0
+    ],
+    "avg_temp_c": [
+      12.0,
+      26.0
+    ],
+    "soil_moisture_pct": [
+      20.0,
+      80.0
+    ],
+    "fertilizer_kg": [
+      0.0,
+      250.0
+    ],
+    "field_size_ha": [
+      0.2,
+      4.0
+    ]
+  },
+  "regression_model": "linear_regression",
+  "classification_model": "logistic_regression",
+  "n_clusters": 6,
+  "cluster_profiles": {
+    "0": "Cluster 0: lower fertilizer use, lower field size, lower soil moisture, mixed seasons, mixed cooperative support.",
+    "1": "Cluster 1: higher rainfall, higher soil moisture, higher field size, mixed seasons, mixed cooperative support.",
+    "2": "Cluster 2: higher soil moisture, lower field size, higher temperature, mixed seasons, mixed cooperative support.",
+    "3": "Cluster 3: lower rainfall, lower temperature, higher soil moisture, mixed seasons, mixed cooperative support.",
+    "4": "Cluster 4: lower soil moisture, higher fertilizer use, higher rainfall, mixed seasons, mixed cooperative support.",
+    "5": "Cluster 5: higher field size, higher temperature, lower fertilizer use, mixed seasons, mixed cooperative support."
+  },
+  "regression_test": {
+    "MAE": 0.6962447374204898,
+    "RMSE": 0.8692860987761,
+    "R2": 0.9022874543271633,
+    "cv_RMSE_train": 1.001503794377132
+  },
+  "classification_test": {
+    "precision": 0.92,
+    "recall": 0.8846153846153846,
+    "F1": 0.9019607843137255,
+    "ROC_AUC": 0.9715099715099715,
+    "cv_F1_train": 0.929038558340884
+  },
+  "sklearn_version": "1.8.0",
+  "python_version": "3.12.3",
+  "disclaimer": "Classroom decision-support prototype trained on synthetic data. It does not replace an agronomist and must not decide access to finance, insurance or public services. Human review is required."
+}

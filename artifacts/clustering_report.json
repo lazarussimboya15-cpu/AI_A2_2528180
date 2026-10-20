@@ -1,0 +1,95 @@
+{
+  "verification_code": "AI-A2-8180",
+  "seed": 8180,
+  "silhouette_by_k": {
+    "2": 0.16530797374247672,
+    "3": 0.1705202454823628,
+    "4": 0.18173971758359794,
+    "5": 0.18691420799159783,
+    "6": 0.19428834806339565
+  },
+  "selected_k": 6,
+  "selected_silhouette": 0.19428834806339565,
+  "cluster_structure_strength": "weak",
+  "profiles": {
+    "0": {
+      "size_train_rows": 32,
+      "feature_means": {
+        "rainfall_mm": 1031.041859375,
+        "avg_temp_c": 19.843471875,
+        "soil_moisture_pct": 39.226213333333334,
+        "fertilizer_kg": 62.559429032258066,
+        "field_size_ha": 1.296465625
+      },
+      "season_A_share": 0.5,
+      "cooperative_support_share": 0.46875,
+      "summary": "Cluster 0: lower fertilizer use, lower field size, lower soil moisture, mixed seasons, mixed cooperative support."
+    },
+    "1": {
+      "size_train_rows": 33,
+      "feature_means": {
+        "rainfall_mm": 1219.313703030303,
+        "avg_temp_c": 17.79187272727273,
+        "soil_moisture_pct": 64.44120000000001,
+        "fertilizer_kg": 114.62106451612904,
+        "field_size_ha": 3.0326848484848488
+      },
+      "season_A_share": 0.48484848484848486,
+      "cooperative_support_share": 0.3939393939393939,
+      "summary": "Cluster 1: higher rainfall, higher soil moisture, higher field size, mixed seasons, mixed cooperative support."
+    },
+    "2": {
+      "size_train_rows": 29,
+      "feature_means": {
+        "rainfall_mm": 946.553527586207,
+        "avg_temp_c": 22.147182758620687,
+        "soil_moisture_pct": 65.02597999999999,
+        "fertilizer_kg": 171.95753076923074,
+        "field_size_ha": 1.2153965517241379
+      },
+      "season_A_share": 0.5172413793103449,
+      "cooperative_support_share": 0.5172413793103449,
+      "summary": "Cluster 2: higher soil moisture, lower field size, higher temperature, mixed seasons, mixed cooperative support."
+    },
+    "3": {
+      "size_train_rows": 43,
+      "feature_means": {
+        "rainfall_mm": 734.6985232558139,
+        "avg_temp_c": 14.92133488372093,
+        "soil_moisture_pct": 56.44455,
+        "fertilizer_kg": 144.099,
+        "field_size_ha": 2.1586116279069767
+      },
+      "season_A_share": 0.5813953488372093,
+      "cooperative_support_share": 0.46511627906976744,
+      "summary": "Cluster 3: lower rainfall, lower temperature, higher soil moisture, mixed seasons, mixed cooperative support."
+    },
+    "4": {
+      "size_train_rows": 31,
+      "feature_means": {
+        "rainfall_mm": 1131.1562096774192,
+        "avg_temp_c": 16.023425806451613,
+        "soil_moisture_pct": 31.287012903225808,
+        "fertilizer_kg": 190.05377333333328,
+        "field_size_ha": 1.867558064516129
+      },
+      "season_A_share": 0.4838709677419355,
+      "cooperative_support_share": 0.5806451612903226,
+      "summary": "Cluster 4: lower soil moisture, higher fertilizer use, higher rainfall, mixed seasons, mixed cooperative support."
+    },
+    "5": {
+      "size_train_rows": 40,
+      "feature_means": {
+        "rainfall_mm": 884.9631425,
+        "avg_temp_c": 22.1787125,
+        "soil_moisture_pct": 42.36805263157894,
+        "fertilizer_kg": 95.67495128205128,
+        "field_size_ha": 3.1885424999999996
+      },
+      "season_A_share": 0.45,
+      "cooperative_support_share": 0.575,
+      "summary": "Cluster 5: higher field size, higher temperature, lower fertilizer use, mixed seasons, mixed cooperative support."
+    }
+  },
+  "interpretation": "K=6 has the highest silhouette (0.194), which indicates weak cluster structure. Input features were generated independently, so clusters are rough groupings of similar farm conditions, not natural farm types. Targets were not used to fit clusters."
+}

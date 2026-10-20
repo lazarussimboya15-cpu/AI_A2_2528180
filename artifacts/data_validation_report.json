@@ -1,0 +1,31 @@
+{
+  "verification_code": "AI-A2-8180",
+  "student_id": "ug2528180@ines.ac.rw",
+  "seed": 8180,
+  "base_rows_expected": 261,
+  "sha256": "6e4324acd04d7c209b33860dc6eded0f80048de0657a488bf124f65067644aae",
+  "quality_raw": {
+    "rows_raw": 264,
+    "missing_by_column": {
+      "soil_moisture_pct": 13,
+      "fertilizer_kg": 13
+    },
+    "duplicate_rows": 3,
+    "feature_columns_checked_for_leakage": [
+      "rainfall_mm",
+      "avg_temp_c",
+      "soil_moisture_pct",
+      "fertilizer_kg",
+      "field_size_ha",
+      "season",
+      "cooperative_support"
+    ]
+  },
+  "cleaning": {
+    "rows_before": 264,
+    "duplicates_removed": 3,
+    "rows_after": 261
+  },
+  "imputation": "median, fitted inside each Pipeline on training rows only",
+  "leakage_check": "passed: yield_tons, high_risk and yield per hectare are not features"
+}

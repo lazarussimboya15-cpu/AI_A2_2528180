@@ -1,0 +1,147 @@
+{
+  "verification_code": "AI-A2-8180",
+  "seed": 8180,
+  "positive_class": "high_risk = 1",
+  "n_train": 208,
+  "n_test": 53,
+  "features": [
+    "rainfall_mm",
+    "avg_temp_c",
+    "soil_moisture_pct",
+    "fertilizer_kg",
+    "field_size_ha",
+    "season",
+    "cooperative_support"
+  ],
+  "target_leakage_check": "passed",
+  "models": {
+    "majority_baseline": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "F1": 0.0,
+      "ROC_AUC": 0.5,
+      "confusion_matrix": {
+        "labels": [
+          "low_risk(0)",
+          "high_risk(1)"
+        ],
+        "matrix": [
+          [
+            27,
+            0
+          ],
+          [
+            26,
+            0
+          ]
+        ],
+        "TN_FP_FN_TP": [
+          27,
+          0,
+          26,
+          0
+        ]
+      },
+      "cv_F1_train": 0.13114754098360654
+    },
+    "logistic_regression": {
+      "precision": 0.92,
+      "recall": 0.8846153846153846,
+      "F1": 0.9019607843137255,
+      "ROC_AUC": 0.9715099715099715,
+      "confusion_matrix": {
+        "labels": [
+          "low_risk(0)",
+          "high_risk(1)"
+        ],
+        "matrix": [
+          [
+            25,
+            2
+          ],
+          [
+            3,
+            23
+          ]
+        ],
+        "TN_FP_FN_TP": [
+          25,
+          2,
+          3,
+          23
+        ]
+      },
+      "cv_F1_train": 0.929038558340884
+    },
+    "random_forest": {
+      "precision": 0.8461538461538461,
+      "recall": 0.8461538461538461,
+      "F1": 0.8461538461538461,
+      "ROC_AUC": 0.9472934472934473,
+      "confusion_matrix": {
+        "labels": [
+          "low_risk(0)",
+          "high_risk(1)"
+        ],
+        "matrix": [
+          [
+            23,
+            4
+          ],
+          [
+            4,
+            22
+          ]
+        ],
+        "TN_FP_FN_TP": [
+          23,
+          4,
+          4,
+          22
+        ]
+      },
+      "cv_F1_train": 0.8925118661162511
+    },
+    "gradient_boosting": {
+      "precision": 0.88,
+      "recall": 0.8461538461538461,
+      "F1": 0.8627450980392157,
+      "ROC_AUC": 0.9344729344729346,
+      "confusion_matrix": {
+        "labels": [
+          "low_risk(0)",
+          "high_risk(1)"
+        ],
+        "matrix": [
+          [
+            24,
+            3
+          ],
+          [
+            4,
+            22
+          ]
+        ],
+        "TN_FP_FN_TP": [
+          24,
+          3,
+          4,
+          22
+        ]
+      },
+      "cv_F1_train": 0.882098111400437
+    }
+  },
+  "selected_model": "logistic_regression",
+  "selection_reason": "logistic_regression had the highest 5-fold cross-validated F1 on the training set (0.9290). The majority baseline has test F1 0.0000 and recall 0.0000. Selection used training CV only; test scores were reported afterwards.",
+  "important_error": {
+    "row_id": 204,
+    "actual_high_risk": 0,
+    "predicted_high_risk": 1,
+    "probability_high_risk": 0.7654636714139195,
+    "actual_yield_per_ha": 5.642668892207678,
+    "risk_threshold_yield_per_ha": 5.326627023455567,
+    "distance_to_threshold": 0.3160418687521114,
+    "note": "Rows close to the median yield-per-hectare threshold are hard to classify because random noise can push them across it."
+  }
+}
