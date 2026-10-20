@@ -46,9 +46,9 @@
     "5": "Cluster 5: higher field size, higher temperature, lower fertilizer use, mixed seasons, mixed cooperative support."
   },
   "regression_test": {
-    "MAE": 0.6962447374204898,
-    "RMSE": 0.8692860987761,
-    "R2": 0.9022874543271633,
+    "MAE": 0.6962447374204894,
+    "RMSE": 0.8692860987760995,
+    "R2": 0.9022874543271634,
     "cv_RMSE_train": 1.001503794377132
   },
   "classification_test": {
@@ -58,7 +58,7 @@
     "ROC_AUC": 0.9715099715099715,
     "cv_F1_train": 0.929038558340884
   },
-  "sklearn_version": "1.8.0",
-  "python_version": "3.12.3",
+  "sklearn_version": "1.9.1",
+  "python_version": "3.12.0",
   "disclaimer": "Classroom decision-support prototype trained on synthetic data. It does not replace an agronomist and must not decide access to finance, insurance or public services. Human review is required."
 }
